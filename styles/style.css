@@ -251,13 +251,11 @@ body {
 
 .main_container {
     width: 70vw;
-    height: 100vh;
     margin: 3% auto;
 }
 
 .main__container__content {
     width: 100%;
-    height: 120%;
     display: flex;
     flex-direction: row;
 }
@@ -311,7 +309,7 @@ body {
 
 .products {
     width: 100%;
-    height: 100%;
+    height: 120vh;
     background-color: #fff;
     border-radius: 8px;
     border: 1px solid #E4E4E4;
@@ -426,4 +424,8 @@ body {
 
 .paginator a:last-child {
     margin-left: 5%;
+}
+
+footer {
+    
 }
