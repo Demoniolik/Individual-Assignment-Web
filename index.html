@@ -39,183 +39,217 @@
                     <img src="img/icons/search.svg" alt="">
                 </button>
             </form>
-        </div>
-        <!-- Facebook -->
-        <div class="a"><img src="" alt=""></div> 
-        <!-- Instagram -->
-        <div class="a"><img src="" alt=""></div>
-        <div class="cart">
-            <img src="" alt="">
-            <div class="amount_of_product">
 
-            </div>
-            <div class="total_amount_to_pay">
+            <!-- Facebook -->
+            <a href=""><img src="img/icons/fb.png" alt=""></a> 
+            <!-- Instagram -->
+            <a href=""><img src="img/icons/inst.png" alt=""></a>
+            <div class="cart">
+                <img src="img/icons/cart.svg" alt="">
+                <div class="amount_of_product">
 
+                </div>
+                <div class="total_amount_to_pay">
+                    1501 USD
+                </div>
             </div>
         </div>
     </div>
 
     <div class="slider">
-        <div class="slide">
+        <div class="item">
             <h2></h2>
             <h3></h3>
-            <img src="" alt="">
+            <img src="img/slider_content/cats.jpg" alt="">
         </div>
-        <div class="slide">
+        <div class="item">
             <h2></h2>
             <h3></h3>
-            <img src="" alt="">
+            <img src="img/slider_content/dogs.jpg" alt="">
         </div>
-        <div class="slide">
+        <div class="item">
             <h2></h2>
             <h3></h3>
-            <img src="" alt="">
+            <img src="img/slider_content/parrot.jpg" alt="">
         </div>
-        <div class="slide">
+        <div class="item">
             <h2></h2>
             <h3></h3>
-            <img src="" alt="">
+            <img src="img/slider_content/spider.jpg" alt="">
         </div>
+        <a class="prev" onclick="minusSlide()">&#10094;</a>
+        <a class="next" onclick="plusSlide()">&#10095;</a>
+    </div>
+
+    <div class="slider-dots">
+        <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+        <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+        <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+        <span class="slider-dots_item" onclick="currentSlide(4)"></span>
     </div>
 
     <div class="main_container">
-        <div class="nav_bar">
-            <div class="nav_bar_header">
-                <img src="" alt="">
-                <h4></h4>
+        <div class="main__container__content">
+            <div class="nav_bar">
+                <div class="nav_bar_header">
+                    <img src="img/icons/Box.svg" alt="">
+                    <h4>Products</h4>
+                </div>
+                <div class="category">
+                    <div class="category_header">
+                        <h5>Cats food</h5>
+                        <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
+                    </div>
+                    <ul>
+                        <li>Cat category #1</li>
+                        <li>Cat category #2</li>
+                        <li>Cat category #3</li>
+                        <li>Cat category #4</li>
+                        <li>Cat category #5</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <div class="category_header">
+                        <h5>Dogs food</h5>
+                        <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
+                    </div>
+                    <ul>
+                        <li>Dog category #1</li>
+                        <li>Dog category #2</li>
+                        <li>Dog category #3</li>
+                        <li>Dog category #4</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <div class="category_header">
+                        <h5>Parrot food</h5>
+                        <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
+                    </div>
+                    <ul>
+                        <li>Parrot category #1</li>
+                        <li>Parrot category #2</li>
+                        <li>Parrot category #3</li>
+                    </ul>
+                </div>
             </div>
-            <div class="category">
-                <h5></h5>
-                <img src="" alt="">
+            <div class="prdoucts_container">
+                <div class="products">
+                    <div class="products_row">
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Lorem ipsum dolor sit amet consectetur.</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="products_row">
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Lorem ipsum dolor sit amet consectetur.</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="products_row">
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Lorem ipsum dolor sit amet consectetur.</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <h6>OLO12120</h6>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show_more">
+                    <img src="img/icons/refresh.svg" alt="">
+                    <h3>Показать ещё</h3>
+                </div>
+                <div class="paginator">
+                    <a href="#" id="prev_page">Назад</a>
+                    <a href="#" class="page">1</a>
+                    <a href="#" class="page">2</a>
+                    <a href="#" class="page current_page">3</a>
+                    <a href="#" class="page">...</a>
+                    <a href="#" class="page">12</a>
+                    <a href="" id="next_page">Вперёд</a>
+                </div>
             </div>
-            <div class="filter">
-                <h5></h5>
-                <img src="" alt="">
-            </div>
-            <div class="amoutn">
-                <h5></h5>
-                <img src="" alt="">
-            </div>
-        </div>
-        <div class="products">
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-            <div class="product_unit">
-                <h6>OLO12120</h6>
-                <img src="" alt="">
-                <a href="" id="prev"></a>
-                <a href="" id="next"></a>
-                <div class="product_name"></div>
-                <div class="price"></div>
-                <button>В корзину</button>
-            </div>
-        </div>
-        <div class="show_more"><h3>Показать ещё</h3></div>
-        <div class="paginator">
-            <a href="" id="prev_page"></a>
-            <div class="page"></div>
-            <div class="page"></div>
-            <div class="page"></div>
-            <div class="page">...</div>
-            <div class="page"></div>
-            <a href="" id="next_page"></a>
         </div>
     </div>
 

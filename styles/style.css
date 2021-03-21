@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+body {
+    background-color: #F8F8F8;
+}
+
 .header {
     width: 100%;
     height: 14vh;
@@ -69,34 +73,357 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .header__menu form {
     width: 50%;
     height: 60%;
-    margin: 0 auto;
+    margin-left: 8%;
     display: flex;
 }
 
 .header__menu form input {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    margin-right: 3%;
+    border-radius: 8px 0 0 8px;
     background: rgba(255, 255, 255, 0.158);
     border: 0px;
 }
 
+.header__menu form input:focus {
+    outline: none;
+}
+
 .header__menu form input::placeholder {
-    padding: 5%;
+    color: #fff;
+}
+
+.header__menu form input[type=text] {
+    padding-left: 5%;
     color: #fff;
 }
 
 #search {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.158);
+    border-radius: 0 8px 8px 0;
     border: 0;
+    padding-right: 3%;
+    margin-right: 2%;
 }
 
-#search img {
-    fill: #fff;
+#search:focus {
+    outline: none;
+}
+
+.header__menu a {
+    margin-left: 1%;
+}
+
+
+.cart {
+    width: 7%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart img {
+    width: 25%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+.cart .total_amount_to_pay {
+    width: 60%;
+    color: #fff;
+}
+
+
+.slider{
+    max-width: 70%;
+    position: relative;
+    margin: auto;
+    height: 50vh;
+    margin-bottom: 15px;
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    border-radius: 8px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* При наведенні на кнопки додається фон кнопок */
+
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Заголовок слайда */
+
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Вирівнювання текста по горизонталі та вертикалі*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тінь*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+/* Кружочки */
+
+.slider-dots {
+    text-align: center;
+}
+
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+
+/* Анімація слайдів */
+
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.main_container {
+    width: 70vw;
+    height: 100vh;
+    margin: 3% auto;
+}
+
+.main__container__content {
+    width: 100%;
+    height: 120%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_bar {
+    width: 20%;
+}
+
+.nav_bar_header {
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    color: #1E6BDE;
+}
+
+.category_header {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.category_header h5 {
+    width: 70%;
+    padding-left: 10%;
+    font-size: 12pt;
+}
+
+.category_header {
+     width: 60%;
+     border-radius: 4px;
+     border: 1px solid #828282; 
+}
+
+.category_header img {
+    margin-right: 10%;
+}
+
+.category ul {
+    list-style-type: none;
+}
+
+.category ul li{
+    margin: 5%;
+    margin-left: 10%;
+}
+
+.prdoucts_container {
+    width: 80%;
+    height: 100%;
+}
+
+.products {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #E4E4E4;
+    margin-bottom: 5%;
+}
+
+.products_row {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+}
+
+.product_unit {
+    width: 25%;
+    height: 80%;
+    padding: 2%;
+}
+
+.product_unit h6 {
+    float: right;
+    color: #828282;
+    font-size: 8pt;
+    margin-bottom: 5%;
+}
+
+.product_unit img {
+    width: 90%;
+    height: 50%;
+    object-fit: contain;
+    margin-bottom: 10%;
+}
+
+.product_unit .product_name {
+    width: 90%;
+    height: 5%;
+    padding: 1%;
+    margin-bottom: 10%;
+}
+
+.product_unit .price {
+    width: 90%;
+    padding: 1%;
+    color: #1E6BDE;
+    margin-bottom: 10%;
+}
+
+.product_unit button {
+    width: 90%;
+    height: 10%;
+    background-color: #FFBA07;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.product_unit button:focus {
+    outline: none;
+}
+
+.show_more {
+    width: 20%;
+    height: 3%;
+    color: #fff;
+    border-radius: 8px;
+    background-color: #1E6BDE;
+    padding: 1%;
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.paginator {
+    width: 35%;
+    height: 5%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.paginator a {
+    width: 20vw;
+    height: 4vh;
+    margin: 1%;
+    border: #EBEBEB 1px solid;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #919191;
+    text-decoration: none;
+    text-align: center;
+    line-height: 4vh;
+}
+
+.paginator a.current_page {
+    background-color: #1E6BDE;
+    color: #fff;
+}
+
+.paginator a:first-child,
+.paginator a:last-child {
+    color: #909090;
+    background: none;
+    border: none;
+}
+
+.paginator a:first-child {
+    margin-right: 5%;
+}
+
+.paginator a:last-child {
+    margin-left: 5%;
 }
