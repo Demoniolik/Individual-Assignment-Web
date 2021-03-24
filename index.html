@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Zoo shop</title>
 </head>
 <body>
@@ -22,8 +25,8 @@
                 <a href="" class="header_items">Ещё какой-то пункт</a>
             </div>
             <div class="header_contacts">
-                <img src="img/icons/phone_logo.svg" alt="">
-                <a href="">+0880-555-3535</a>
+                <img src="img/icons/account.svg" alt="">
+                <a href="">Sign in</a>
             </div>
         </div>
         <div class="header__menu">
@@ -96,11 +99,11 @@
                     <h4>Products</h4>
                 </div>
                 <div class="category">
-                    <div class="category_header">
+                    <div class="category_header" id="cat_food_category">
                         <h5>Cats food</h5>
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
-                    <ul>
+                    <ul class="cat_options">
                         <li>Cat category #1</li>
                         <li>Cat category #2</li>
                         <li>Cat category #3</li>
@@ -109,11 +112,11 @@
                     </ul>
                 </div>
                 <div class="category">
-                    <div class="category_header">
+                    <div class="category_header" id="dog_food_category">
                         <h5>Dogs food</h5>
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
-                    <ul>
+                    <ul class="dog_options">
                         <li>Dog category #1</li>
                         <li>Dog category #2</li>
                         <li>Dog category #3</li>
@@ -121,11 +124,11 @@
                     </ul>
                 </div>
                 <div class="category">
-                    <div class="category_header">
+                    <div class="category_header" id="parrot_food_category">
                         <h5>Parrot food</h5>
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
-                    <ul>
+                    <ul class="parrot_options">
                         <li>Parrot category #1</li>
                         <li>Parrot category #2</li>
                         <li>Parrot category #3</li>
@@ -136,103 +139,175 @@
                 <div class="products">
                     <div class="products_row">
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status">
+                                    
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                         <hr>
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status limited">
+                                    <p>Заканчиваеться</p>
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Lorem ipsum dolor sit amet consectetur.</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                         <hr>
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status sale">
+                                    Скидка
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                         <hr>
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status">
+                                    
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                     </div>
                     <hr>
                     <div class="products_row">
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status">
+                                    
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                         <hr>
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
-                            <img src="img/main_content/dogs_product.jpg" alt="">
-                            <div class="product_name">Lorem ipsum dolor sit amet consectetur.</div>
-                            <div class="price">300 USD</div>
-                            <button>В корзину</button>
-                        </div>
-                        <hr>
-                        <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status">
+                                    
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                         <hr>
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status sale">
+                                    Скидка
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price sale"><span>500 USD</div>
+                            <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
+                        </div>
+                        <hr>
+                        <div class="product_unit">
+                            <div class="unit_header">
+                                <div class="status sale">
+                                    Скидка
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                     </div>
                     <hr>
                     <div class="products_row">
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status sale">
+                                    Скидка
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                         <hr>
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
-                            <img src="img/main_content/dogs_product.jpg" alt="">
-                            <div class="product_name">Lorem ipsum dolor sit amet consectetur.</div>
-                            <div class="price">300 USD</div>
-                            <button>В корзину</button>
-                        </div>
-                        <hr>
-                        <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status sale">
+                                    Скидка
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
                         </div>
                         <hr>
                         <div class="product_unit">
-                            <h6>OLO12120</h6>
+                            <div class="unit_header">
+                                <div class="status sale">
+                                    Скидка
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
                             <div class="product_name">Dog food</div>
                             <div class="price">300 USD</div>
                             <button>В корзину</button>
+                            <div class="availability available">Есть а наличи</div>
+                        </div>
+                        <hr>
+                        <div class="product_unit not_available">
+                            <div class="unit_header">
+                                <div class="status sale best_seller">
+                                    Хит продаж
+                                </div>
+                                <h6>OLO12120</h6>
+                            </div>
+                            <img src="img/main_content/dogs_product.jpg" alt="">
+                            <div class="product_name">Dog food</div>
+                            <div class="price">300 USD</div>
+                            <button>В корзину</button>
+                            <div class="availability not_available">Нету в наличи</div>
                         </div>
                     </div>
                 </div>
@@ -260,36 +335,41 @@
             <p>Тоже важная ифнормация</p>
             <p>© «All rights are preserved», 2021</p>
         </div>
-        <div class="pages_of_site_container">
-            <h3></h3>
-            <a href="">
-                <h3></h3>
-            </a><a href="">
-                <h3></h3>
-            </a><a href="">
-                <h3></h3>
-            </a><a href="">
-                <h3></h3>
-            </a><a href="">
-                <h3></h3>
-            </a>
+        <div class="pages_of_site">
+            <h3>Страницы сайта</h3>
+            <div class="pages_of_site_container">
+                <a href="">
+                    <h3>Каталог</h3>
+                </a><a href="">
+                    <h3>О нас</h3>
+                </a><a href="">
+                    <h3>Контакты</h3>
+                </a><a href="">
+                    <h3>Дотсавка и оплата</h3>
+                </a><a href="">
+                    <h3>Ещё какой-то пункт</h3>
+                </a>
+            </div>
         </div>
         <div class="contacts">
-            <h3></h3>
-            <p></p>
-            <p></p>
-            <p></p>
+            <h3>Контакты</h3>
+            <p>+380 80 353 55 55</p>
+            <p>example.support@domain.com</p>
+            <p>г. Сумы ул. Люблинская</p>
         </div>
         <div class="social_networks">
+            <h3>Мы в соц. сетях</h3>
             <a href="">
-                <img src="" alt="">
+                <img src="img/icons/fb.png" alt="">
             </a>
             <a href="">
-                <img src="" alt="">
+                <img src="img/icons/inst.png" alt="">
             </a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="slider.js"></script>
+    <script src="nav_bar_script.js"></script>
 </body>
 </html>
