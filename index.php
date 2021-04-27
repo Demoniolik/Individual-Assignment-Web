@@ -1,5 +1,7 @@
 <?php
     include 'model/product.php';
+    include 'util/availability.php';
+    include 'util/product_status.php';
 
   $connection = mysqli_connect('127.0.0.1', 'root', '', 'pet_shop');
   if($connection == false) {
@@ -154,7 +156,7 @@
                     $productArray[] = new Product(
                         $row[id], $row[name], $row[price], 
                         $row[poster], $row[isAvailable], 
-                        $row[specialProposition], $row[categoryId]
+                        $row[special_proposition], $row[categoryId]
                       );
                   }
             }
@@ -177,14 +179,14 @@
 
                         <div class="product_unit 
                             <?php 
-                                if ($productArray[$index]->isAvailable == 0) {
-                                    echo "not_available";
-                                }
+                                echo setAvailabilityStatus($productArray[$index]->isAvailable);
                             ?> 
                         ">
                             <div class="unit_header">
-                                <div class="status">
-                                    
+                                <div class="status <?php echo setSpecialPropositionStatus($productArray[$index]->specialProposition); ?>">
+                                    <?php 
+                                        echo $productArray[$index]->specialProposition;
+                                    ?>
                                 </div>
                                 <h6><?php echo $productArray[$index]->id ?></h6>
                             </div>
@@ -194,19 +196,11 @@
                             <button>В корзину</button>
                             <div class="availability 
                                 <?php 
-                                    if ($productArray[$index]->isAvailable == 0) {
-                                        echo "not_available";
-                                    } else {
-                                        echo "available";
-                                    }
+                                    echo setAvailabilityStatus($productArray[$index]->isAvailable);
                                 ?>
                             ">
                                 <?php 
-                                    if ($productArray[$index]->isAvailable == 1) {
-                                        echo "Есть в наличи";
-                                    } else {
-                                        echo "Нету в наличи";
-                                    }
+                                    echo setAvailabilityValue($productArray[$index]->isAvailable);
                                 ?> 
                             </div>
                         </div>
