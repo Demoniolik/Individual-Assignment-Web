@@ -19,5 +19,15 @@
             $this->specialProposition = $specialProposition;
             $this->categoryId = $categoryId;
         }
+
+        public function toString() {
+            return "id: " . $this->id . "</br>" 
+                . "name: " . $this->name . "</br>"
+                . "price: " . $this->price . "</br>"
+                . "poster: " . $this->poster . "</br>"
+                . "isAvailable: " . $this->isAvailable . "</br>"
+                . "specialProposition: " . $this->specialProposition . "</br>"
+                . "categoryId: " . $this->categoryId . "</br>";
+        }
     }
 ?>

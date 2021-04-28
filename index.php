@@ -45,9 +45,9 @@
             <!-- <a href="">
                 <img src="" alt="">
             </a> -->
-            <form action="">
+            <form action="pages/find_product_by_name_page.php" method="get">
                 <!-- Search input -->
-                <input type="text" placeholder="Поиск товаров">
+                <input type="text" placeholder="Поиск товаров" name="search_value">
                 <button type="submit" id="search">
                     <!-- Seacrh button -->
                     <img src="img/icons/search.svg" alt="">
