@@ -50,6 +50,7 @@ body {
 }
 
 .header_items {
+    box-sizing: border-box;
     padding: 1%;
     border: 1px solid #fff;
     text-decoration: none;
@@ -344,8 +345,9 @@ ul.hidden {
 
 .product_unit {
     width: 25%;
-    height: 80%;
-    padding: 2%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.8%;
 }
 
 .product_unit.not_available {
@@ -370,6 +372,8 @@ ul.hidden {
     padding: 1% 8%;
     font-weight: 300;
 }
+
+/* Statuses of product */
 
 .unit_header .status.sale {
     background-color: #3664C9;
@@ -404,7 +408,7 @@ ul.hidden {
 
 .product_unit img {
     width: 90%;
-    height: 50%;
+    height: 40%;
     object-fit: contain;
     margin-bottom: 5%;
 }
@@ -413,12 +417,13 @@ ul.hidden {
     width: 90%;
     height: 5%;
     padding: 1%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     font-weight: 900;
 }
 
 .product_unit .price {
     width: 90%;
+    height: 5%;
     padding: 1%;
     color: #1E6BDE;
     margin-bottom: 7%;
