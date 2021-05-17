@@ -37,7 +37,7 @@
             </div>
             <div class="header_contacts">
                 <img src="img/icons/account.svg" alt="">
-                <a href="">Sign in</a>
+                <a href="pages/login.php">Sign in</a>
             </div>
         </div>
         <div class="header__menu">

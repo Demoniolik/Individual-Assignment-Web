@@ -29,8 +29,6 @@
               }
         }
 
-        mysqli_close($conn);
-
         for ($i = 0; $i < count($productArray); $i++) {
             echo $productArray[$i]->toString();
         }
