@@ -3,6 +3,7 @@
         public $id;
         public $name;
         public $price;
+        public $description;
         public $poster;
         public $isAvailable;
         public $specialProposition;
@@ -20,10 +21,22 @@
             $this->categoryId = $categoryId;
         }
 
+        public static function buildProduct($id, $name, $price, $description, $poster, 
+        $isAvailable, $specialProposition, $categoryId) {
+            $product = new Product(
+                $id, $name, $price, $poster, $isAvailable, 
+                $specialProposition, $categoryId
+            );
+            $product->$description = $description;
+
+            return $product;
+        }
+
         public function toString() {
             return "id: " . $this->id . "</br>" 
                 . "name: " . $this->name . "</br>"
                 . "price: " . $this->price . "</br>"
+                . "description: " . $this->desciption . "</br>"
                 . "poster: " . $this->poster . "</br>"
                 . "isAvailable: " . $this->isAvailable . "</br>"
                 . "specialProposition: " . $this->specialProposition . "</br>"

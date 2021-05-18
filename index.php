@@ -132,10 +132,16 @@
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
                     <ul class="dog_options">
-                        <li>Dog category #1</li>
-                        <li>Dog category #2</li>
-                        <li>Dog category #3</li>
-                        <li>Dog category #4</li>
+                        <?php 
+                            $categoriesSearch = mysqli_query($connection, "SELECT DISTINCT special_proposition FROM product;");
+                            if(mysqli_num_rows($categoriesSearch) > 0) {
+                                for($i = 0; $row = mysqli_fetch_assoc($categoriesSearch); $i++) {
+                                    $str = str_replace(" ", "_", $row[special_proposition]);
+                                    echo "<li> <a href=redirect_controller/filter_by_spec_proposition.php?proposition='$str'>" 
+                                    . $row[special_proposition] . " </a> </li>";
+                                  }
+                            }
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -191,7 +197,11 @@
                                 <h6><?php echo $productArray[$index]->id ?></h6>
                             </div>
                             <img src="img/main_content/dogs_product.jpg" alt="">
-                            <div class="product_name"><?php echo $productArray[$index]->name ?></div>
+                            <div class="product_name"> 
+                                <a href="pages/show_detailed_info.php?product_id=<?php echo $productArray[$index]->id ?>"> 
+                                    <?php echo $productArray[$index]->name ?> 
+                                </a>
+                            </div>
                             <div class="price"><?php echo $productArray[$index]->price ?> USD</div>
                             <button>В корзину</button>
                             <div class="availability 
