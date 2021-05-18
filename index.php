@@ -2,7 +2,7 @@
     include 'model/product.php';
     include 'util/availability.php';
     include 'util/product_status.php';
-
+    session_start();
   $connection = mysqli_connect('127.0.0.1', 'root', '', 'pet_shop');
   if($connection == false) {
     echo "error";
@@ -111,20 +111,24 @@
                 </div>
                 <div class="category">
                     <div class="category_header" id="cat_food_category">
-                        <h5>Cats food</h5>
+                        <h5>Categories</h5>
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
                     <ul class="cat_options">
-                        <li>Cat category #1</li>
-                        <li>Cat category #2</li>
-                        <li>Cat category #3</li>
-                        <li>Cat category #4</li>
-                        <li>Cat category #5</li>
+                        <?php                 
+                            $categoriesSearch = mysqli_query($connection, "SELECT * FROM category;");
+                            if(mysqli_num_rows($categoriesSearch) > 0) {
+                                for($i = 0; $row = mysqli_fetch_assoc($categoriesSearch); $i++) {
+                                    echo "<li> <a href=redirect_controller/show_items_by_category.php?category_id='$row[id]'>" . $row[name] . " </a> </li>";
+                                  }
+                            }
+                        ?>
+                        <li><a href="redirect_controller/show_items_by_category.php">Show all products</a></li>
                     </ul>
                 </div>
                 <div class="category">
                     <div class="category_header" id="dog_food_category">
-                        <h5>Dogs food</h5>
+                        <h5>Filters</h5>
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
                     <ul class="dog_options">
@@ -134,21 +138,17 @@
                         <li>Dog category #4</li>
                     </ul>
                 </div>
-                <div class="category">
-                    <div class="category_header" id="parrot_food_category">
-                        <h5>Parrot food</h5>
-                        <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
-                    </div>
-                    <ul class="parrot_options">
-                        <li>Parrot category #1</li>
-                        <li>Parrot category #2</li>
-                        <li>Parrot category #3</li>
-                    </ul>
-                </div>
             </div>
             <?php 
             
-            $result = mysqli_query($connection, "SELECT * FROM product;");
+            $QUERY = "SELECT * FROM product;";
+
+            if ($_SESSION["select_items"] != "") {
+                $QUERY = $_SESSION["select_items"];
+            }
+
+            $result = mysqli_query($connection, $QUERY);
+            echo mysqli_error($connection);
             $productArray = array();
 
             if(mysqli_num_rows($result) > 0) {
