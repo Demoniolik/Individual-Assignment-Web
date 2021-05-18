@@ -1,8 +1,11 @@
-<!-- 
-    Before accessing thie page user should be authorized and have role of admin type
-    In other cases this page will be forbbiten for others
- -->
-
+<?php 
+    include '../../model/user.php';
+    session_start();
+    if ($_SESSION["user_role"] != 1) {
+        header("Location: ../error/forbidden_access.html");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

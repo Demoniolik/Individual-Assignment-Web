@@ -1,6 +1,7 @@
 <?php 
     include '../model/user.php';
-
+    session_start();
+    
     $first_name = $_POST["first_name"];
     $second_name = $_POST["second_name"];
     $login = $_POST["login"];
@@ -18,7 +19,9 @@
     }
 
     $result = mysqli_query($connection, $FIND_USER_BY_CREDENTIALS_QUERY);
+        
         $_SESSION["user"] = $user;
+        $_SESSION["user_role"] = $user->role_id;
         header("Location: ../index.php");
         exit();
 ?>

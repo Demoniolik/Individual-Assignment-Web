@@ -1,6 +1,7 @@
 <?php 
     include '../model/user.php';
-
+    session_start();
+    
     $login = $_POST["login"];
     $password = $_POST["password"];
 
@@ -24,6 +25,8 @@
                 );
               }
               if (isUserAdmin($user)) {
+                $_SESSION["user"] = $user;
+                $_SESSION["user_role"] = $user->role_id;
                 header("Location: ../pages/admin/admin_page.php");
                 exit();
               }
@@ -32,7 +35,9 @@
         exit();
         }
 
+        
         $_SESSION["user"] = $user;
+        $_SESSION["user_role"] = $user->role_id;
         header("Location: ../index.php");
         exit();
 
