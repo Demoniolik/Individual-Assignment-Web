@@ -11,98 +11,97 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/magnific-popup.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <title>Zoo shop</title>
 </head>
+
 <body>
-    
+
     <div class="header">
-        <div class="inner__header">
-            <div class="logo">
-                <img src="img/icons/logo.svg" alt="">
-            </div>
-            <div class="header_menu_container">
-                <a href="" class="header_items">Какталог</a>
-                <a href="" class="header_items">О нас</a>
-                <a href="" class="header_items">Контакты</a>
-                <a href="" class="header_items">Доставка и оплата</a>
-                <a href="" class="header_items">Ещё какой-то пункт</a>
-            </div>
-            <div class="header_contacts">
-                <img src="img/icons/account.svg" alt="">
-                <a href="pages/login.php">Sign in</a>
-            </div>
-        </div>
-        <div class="header__menu">
-            <!-- Header categories button -->
-            <!-- <a href="">
-                <img src="" alt="">
-            </a> -->
-            <form action="pages/find_product_by_name_page.php" method="get">
-                <!-- Search input -->
-                <input type="text" placeholder="Поиск товаров" name="search_value">
-                <button type="submit" id="search">
-                    <!-- Seacrh button -->
-                    <img src="img/icons/search.svg" alt="">
-                </button>
-            </form>
-
-            <!-- Facebook -->
-            <a href=""><img src="img/icons/fb.png" alt=""></a> 
-            <!-- Instagram -->
-            <a href=""><img src="img/icons/inst.png" alt=""></a>
-            <div class="cart">
-                <img src="img/icons/cart.svg" alt="">
-                <div class="amount_of_product">
-
+        <div class="container">
+            <div class="inner__header">
+                <div class="logo">
+                    <img src="img/icons/logo.svg" alt="">
                 </div>
-                <div class="total_amount_to_pay">
-                    0 USD
+                <div class="header_menu_container">
+                    <a href="" class="header_items">Каталог</a>
+                    <a href="" class="header_items">О нас</a>
+                    <a href="" class="header_items">Контакты</a>
+                    <a href="" class="header_items">Доставка и оплата</a>
+                    <a href="" class="header_items">Ещё какой-то пункт</a>
+                </div>
+                <div class="header_contacts">
+                    <img src="img/icons/account.svg" alt="">
+                    <a class="toggle-popup" href="#login-form">Sign in</a>
+                </div>
+            </div>
+            <div class="header__menu">
+                <form action="pages/find_product_by_name_page.php" method="get">
+                    <!-- Search input -->
+                    <input type="text" placeholder="Поиск товаров" name="search_value">
+                    <button type="submit" id="search">
+                        <!-- Seacrh button -->
+                        <img src="img/icons/search.svg" alt="">
+                    </button>
+                </form>
+                <div class="cart">
+                    <img src="img/icons/cart.svg" alt="">
+                    <div class="amount_of_product">
+
+                    </div>
+                    <div class="total_amount_to_pay">
+                        1501 $
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="slider">
-        <div class="item">
-            <h2></h2>
-            <h3></h3>
-            <img src="img/slider_content/cats.jpg" alt="">
-        </div>
-        <div class="item">
-            <h2></h2>
-            <h3></h3>
-            <img src="img/slider_content/dogs.jpg" alt="">
-        </div>
-        <div class="item">
-            <h2></h2>
-            <h3></h3>
-            <img src="img/slider_content/parrot.jpg" alt="">
-        </div>
-        <div class="item">
-            <h2></h2>
-            <h3></h3>
-            <img src="img/slider_content/spider.jpg" alt="">
-        </div>
-        <a class="prev" onclick="minusSlide()">&#10094;</a>
-        <a class="next" onclick="plusSlide()">&#10095;</a>
-    </div>
 
-    <div class="slider-dots">
-        <span class="slider-dots_item" onclick="currentSlide(1)"></span>
-        <span class="slider-dots_item" onclick="currentSlide(2)"></span>
-        <span class="slider-dots_item" onclick="currentSlide(3)"></span>
-        <span class="slider-dots_item" onclick="currentSlide(4)"></span>
-    </div>
 
     <div class="main_container">
+        <div class="slider">
+            <div class="item">
+                <h2></h2>
+                <h3></h3>
+                <img src="img/slider_content/cats.jpg" alt="">
+            </div>
+            <div class="item">
+                <h2></h2>
+                <h3></h3>
+                <img src="img/slider_content/dogs.jpg" alt="">
+            </div>
+            <div class="item">
+                <h2></h2>
+                <h3></h3>
+                <img src="img/slider_content/parrot.jpg" alt="">
+            </div>
+            <div class="item">
+                <h2></h2>
+                <h3></h3>
+                <img src="img/slider_content/spider.jpg" alt="">
+            </div>
+            <a class="prev" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+        </div>
+
+        <div class="slider-dots">
+            <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(4)"></span>
+        </div>
+
         <div class="main__container__content">
             <div class="nav_bar">
                 <div class="nav_bar_header">
@@ -115,7 +114,7 @@
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
                     <ul class="cat_options">
-                        <?php                 
+                    <?php                 
                             $categoriesSearch = mysqli_query($connection, "SELECT * FROM category;");
                             if(mysqli_num_rows($categoriesSearch) > 0) {
                                 for($i = 0; $row = mysqli_fetch_assoc($categoriesSearch); $i++) {
@@ -123,7 +122,6 @@
                                   }
                             }
                         ?>
-                        <li><a href="redirect_controller/show_items_by_category.php">Show all products</a></li>
                     </ul>
                 </div>
                 <div class="category">
@@ -144,85 +142,66 @@
                         ?>
                     </ul>
                 </div>
+                <a href="redirect_controller/show_items_by_category.php" class="category_header clear_filters">Очистити фільтри</a>
+
             </div>
-            <?php 
-            
-            $QUERY = "SELECT * FROM product;";
-
-            if ($_SESSION["select_items"] != "") {
-                $QUERY = $_SESSION["select_items"];
-            }
-
-            $result = mysqli_query($connection, $QUERY);
-            echo mysqli_error($connection);
-            $productArray = array();
-
-            if(mysqli_num_rows($result) > 0) {
-                for($i = 0; $row = mysqli_fetch_assoc($result); $i++) {
-                    $productArray[] = new Product(
-                        $row[id], $row[name], $row[price], 
-                        $row[poster], $row[isAvailable], 
-                        $row[special_proposition], $row[categoryId]
-                      );
-                  }
-            }
-
-            ?>
-
             <div class="prdoucts_container">
-                <div class="products">
-                    
-                <?php
-                    $AMOUNT_OF_ROWS = ceil(count($productArray) / 4);
-                    $index = 0;
-                    for ($i = 0; $i < $AMOUNT_OF_ROWS; $i++) {
-                ?>
-                    
-                    <div class="products_row">
-                        <?php 
-                            for ($j = 0; $j < 4 && $index < count($productArray); $j++) {
-                        ?>
 
-                        <div class="product_unit 
+                <?php 
+                
+                $QUERY = "SELECT * FROM product;";
+
+                if ($_SESSION["select_items"] != "") {
+                    $QUERY = $_SESSION["select_items"];
+                }
+
+                $result = mysqli_query($connection, $QUERY);
+                $productArray = array();
+
+                if(mysqli_num_rows($result) > 0) {
+                    for($i = 0; $row = mysqli_fetch_assoc($result); $i++) {
+                        $productArray[] = new Product(
+                            $row[id], $row[name], $row[price], 
+                            $row[poster], $row[isAvailable], 
+                            $row[special_proposition], $row[categoryId]
+                        );
+                    }
+                }
+                ?>
+
+                <div class="products">
+                    <?php  for ($index = 0; $index < count($productArray); $index++) { ?>
+                    <div class="product_unit 
                             <?php 
                                 echo setAvailabilityStatus($productArray[$index]->isAvailable);
-                            ?> 
-                        ">
-                            <div class="unit_header">
-                                <div class="status <?php echo setSpecialPropositionStatus($productArray[$index]->specialProposition); ?>">
+                            ?> ">
+                        <div class="unit_header">
+                            <div class="status <?php echo setSpecialPropositionStatus($productArray[$index]->specialProposition); ?> ">
                                     <?php 
                                         echo $productArray[$index]->specialProposition;
                                     ?>
-                                </div>
-                                <h6><?php echo $productArray[$index]->id ?></h6>
                             </div>
-                            <img src="img/main_content/dogs_product.jpg" alt="">
-                            <div class="product_name"> 
-                                <a href="pages/show_detailed_info.php?product_id=<?php echo $productArray[$index]->id ?>"> 
-                                    <?php echo $productArray[$index]->name ?> 
-                                </a>
-                            </div>
-                            <div class="price"><?php echo $productArray[$index]->price ?> USD</div>
-                            <button>В корзину</button>
-                            <div class="availability 
-                                <?php 
+                            <h6><?php echo $productArray[$index]->id ?></h6>
+                        </div>
+                        <img src="img/main_content/dogs_product.jpg" alt="">
+                        <div class="product_name">
+                            <a href="pages/show_detailed_info.php?product_id=<?php echo $productArray[$index]->id ?>"> 
+                                <?php echo $productArray[$index]->name ?> 
+                            </a>
+                        </div>
+                        <div class="price"><?php echo $productArray[$index]->price ?> USD</div>
+                        <button>В корзину</button>
+                        <div class="availability <?php 
                                     echo setAvailabilityStatus($productArray[$index]->isAvailable);
-                                ?>
-                            ">
+                                ?>">
                                 <?php 
                                     echo setAvailabilityValue($productArray[$index]->isAvailable);
                                 ?> 
                             </div>
-                        </div>
-                        <?php 
-                                $index++;
-                            }
-                        ?>
                     </div>
-                    <hr>
-                    <?php 
+                   <?php 
                         }
-                    ?>
+                   ?>
                 </div>
                 <div class="show_more">
                     <img src="img/icons/refresh.svg" alt="">
@@ -281,8 +260,61 @@
         </div>
     </footer>
 
+   <!-- popup form -->
+   <form id="login-form" class="mfp-hide white-popup-block" action="redirect_controller/authorization.php"
+        method="post">
+        <h2 class="title">Sign in</h2>
+
+        <p class="descr">
+            Login to web site to expericance more
+        </p>
+
+        <label for="login">Login</label>
+        <input type="email" name="login" id="login">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit" class="btn">Sing in</button>
+
+        <a href="#reg-form" class="toggle-popup">Sign up</a>
+    </form>
+
+    <!-- popup form -->
+    <form id="reg-form" class="mfp-hide white-popup-block" action="redirect_controller/authorization.php"
+        method="post">
+        <h2 class="title">Registration</h2>
+
+        <p class="descr">
+            Reg to web site to expericance more
+        </p>
+
+        <label for="first_name">First name</label>
+        <input type="text" id="first_name" name="first_name">
+
+        <label for="second_name">Second name</label>
+        <input type="text" id="second_name" name="second_name">
+
+        <label for="login">Login</label>
+        <input type="email" id="login" name="login">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+
+        <label for="repeat_password">Repeat password</label>
+        <input type="password" id="repeat_password" name="repeat_password">
+
+        <button type="submit" class="btn">Sing in</button>
+
+        <a href="#login-form" class="toggle-popup">Sign in</a>
+    </form>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/jquery.magnific-popup.min.js"></script>
+    <script src="script.js"></script>
+
     <script src="slider.js"></script>
     <script src="nav_bar_script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,163 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+.header {
+    width: 100%;
+    height: 14vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.inner__header {
+    width: 100%;
+    height: 40%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 8%;
+    height: 100%;
+    margin-left: 8%;
+    margin-right: 5%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header_items:hover {
+    background-color: #3664C9;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+
+.header_menu_container {
+    width: 53%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_items {
+    box-sizing: border-box;
+    padding: 1%;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #000;
+    margin: 0 3%;
+}
+
+.header_contacts {
+    width: 20%;
+    display: flex;
+    margin-left: 5%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header_contacts a:hover {
+    color: #fff;
+    background-color: #1E6BDE;
+}
+
+.header_contacts a {
+    padding: 2% 5%;
+    border-radius: 4px;
+    border:#000 1px solid;
+    color: #1E6BDE;
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+.header_contacts img {
+    width: 10%;
+    height: 70%;
+    margin-left: 1%;
+    margin-right: 3%;
+}
+
+.header__menu {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(264.51deg, #001996 0%, #1E6BDE 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menu form {
+    width: 50%;
+    height: 60%;
+    margin-left: 8%;
+    display: flex;
+}
+
+.header__menu form input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    background: rgba(255, 255, 255, 0.158);
+    border: 0px;
+}
+
+.header__menu form input:focus {
+    outline: none;
+}
+
+.header__menu form input::placeholder {
+    color: #fff;
+}
+
+.header__menu form input[type=text] {
+    padding-left: 5%;
+    color: #fff;
+}
+
+#search {
+    background: rgba(255, 255, 255, 0.158);
+    border-radius: 0 8px 8px 0;
+    border: 0;
+    padding-right: 3%;
+    margin-right: 2%;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.header__menu a {
+    margin-left: 1%;
+}
+
+
+.cart {
+    width: 7%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart img {
+    width: 25%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+.cart .total_amount_to_pay {
+    width: 60%;
+    color: #fff;
+}
