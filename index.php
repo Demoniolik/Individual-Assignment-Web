@@ -3,7 +3,7 @@
     include 'util/availability.php';
     include 'util/product_status.php';
     session_start();
-  $connection = mysqli_connect('127.0.0.1', 'root', '', 'pet_shop');
+  $connection = mysqli_connect('127.0.0.1', 'dima_bekker', 'ADMINthebest321', 'dimabekker131');
   if($connection == false) {
     echo "error";
   }
@@ -42,7 +42,13 @@
                 </div>
                 <div class="header_contacts">
                     <img src="img/icons/account.svg" alt="">
-                    <a class="toggle-popup" href="#login-form">Sign in</a>
+                    <?php 
+                        if ($_SESSION["user_role"] == 2) {
+                            echo "<a class=\"logout\" href=\"/redirect_controller/logout.php\">Log out</a>";
+                        } else {
+                            echo "<a class=\"toggle-popup\" href=\"#login-form\">Sign in</a>";
+                        }
+                    ?>
                 </div>
             </div>
             <div class="header__menu">
@@ -183,7 +189,8 @@
                             </div>
                             <h6><?php echo $productArray[$index]->id ?></h6>
                         </div>
-                        <img src="img/main_content/dogs_product.jpg" alt="">
+                        <img src="img/main_content/dogs_product.jpg" alt=""
+                        href="pages/show_detailed_info.php?product_id=<?php echo $productArray[$index]->id ?>">
                         <div class="product_name">
                             <a href="pages/show_detailed_info.php?product_id=<?php echo $productArray[$index]->id ?>"> 
                                 <?php echo $productArray[$index]->name ?> 

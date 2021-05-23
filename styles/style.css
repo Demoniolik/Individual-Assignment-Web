@@ -83,6 +83,11 @@ body {
     transition: .2s ease-out;
 }
 
+.header_contacts a.logout:hover {
+    background-color: rgb(206, 47, 47);
+    color: #fff;
+}
+
 .header_contacts a:hover {
     color: #000;
     background: #fff;
@@ -835,4 +840,13 @@ footer a {
         flex-direction: column;
         padding: 60px 16px;
     }
+}
+
+div[style="margin: 0 20% !important; text-align:center !important;font-size:16px !important;font-family:arial !important;background-color:black !important;color:white !important"] {
+    position: absolute;
+    top: -200px;
+}
+
+.cbalink {
+    display: none;
 }

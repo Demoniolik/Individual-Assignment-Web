@@ -1,5 +1,5 @@
 <?php 
-    $connection = mysqli_connect('127.0.0.1', 'root', '', 'pet_shop');
+    $connection = mysqli_connect('127.0.0.1', 'dima_bekker', 'ADMINthebest321', 'dimabekker131');
     if($connection == false) {
       echo "error";
     }

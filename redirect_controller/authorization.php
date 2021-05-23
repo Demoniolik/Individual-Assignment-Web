@@ -7,7 +7,7 @@
 
     $FIND_USER_BY_CREDENTIALS_QUERY = "SELECT * FROM user WHERE login = '$login' AND password = '$password' LIMIT 1;";
 
-    $connection = mysqli_connect('127.0.0.1', 'root', '', 'pet_shop');
+    $connection = mysqli_connect('127.0.0.1', 'dima_bekker', 'ADMINthebest321', 'dimabekker131');
     if($connection == false) {
       echo "error";
     }
@@ -31,8 +31,8 @@
                 exit();
               }
         }else {
-            header("Location: ../pages/login.php");
-        exit();
+            header("Location: ../index.php");
+            exit();
         }
 
         

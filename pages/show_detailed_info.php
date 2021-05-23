@@ -1,3 +1,11 @@
+<?php 
+    include '../../model/user.php';
+    session_start();
+    if ($_SESSION["user_role"] != 2) {
+        header("Location: error/forbidden_access.html");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,9 +74,9 @@
                 include '../model/product.php';
                 $product_id = $_GET["product_id"];
 
-                $connection = mysqli_connect('127.0.0.1', 'root', '', 'pet_shop');
+                $connection = mysqli_connect('127.0.0.1', 'dima_bekker', 'ADMINthebest321', 'dimabekker131');
                 if($connection == false) {
-                    echo "error";
+                  echo "error";
                 }
 
                 $QUERY = "SELECT * FROM product WHERE id = '$product_id';";
