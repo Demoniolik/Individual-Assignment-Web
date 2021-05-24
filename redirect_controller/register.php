@@ -8,6 +8,11 @@
     $password = $_POST["password"];
     $repeat_password = $_POST["repeat_passwrod"];
 
+    $connection = mysqli_connect('127.0.0.1', 'dima_bekker', 'ADMINthebest321', 'dimabekker131');
+    if($connection == false) {
+      echo "error";
+    }
+
     $FIND_USER_BY_CREDENTIALS_QUERY = "SELECT * FROM user WHERE login = '$login';";
     $result = mysqli_query($connection, $FIND_USER_BY_CREDENTIALS_QUERY);
 
@@ -19,11 +24,6 @@
     first_name = '$first_name', second_name = '$second_name',
     login = '$login', password = '$password',
     blocked = 0, role_id = 2;";
-
-    $connection = mysqli_connect('127.0.0.1', 'dima_bekker', 'ADMINthebest321', 'dimabekker131');
-    if($connection == false) {
-      echo "error";
-    }
 
     $result = mysqli_query($connection, $CREATE_USER_QUERY);
 
