@@ -34,11 +34,11 @@
                     <img src="img/icons/logo.svg" alt="">
                 </div>
                 <div class="header_menu_container">
-                    <a href="" class="header_items">Каталог</a>
-                    <a href="" class="header_items">О нас</a>
-                    <a href="" class="header_items">Контакты</a>
-                    <a href="" class="header_items">Доставка и оплата</a>
-                    <a href="" class="header_items">Ещё какой-то пункт</a>
+                <a href="" class="header_items">Каталог</a>
+                    <a href="" class="header_items">Про нас</a>
+                    <a href="" class="header_items">Контакти</a>
+                    <a href="" class="header_items">Доставка та оплата</a>
+                    <a href="" class="header_items">Ще один новий пункт</a>
                 </div>
                 <div class="header_contacts">
                     <img src="img/icons/account.svg" alt="">
@@ -112,11 +112,11 @@
             <div class="nav_bar">
                 <div class="nav_bar_header">
                     <img src="img/icons/Box.svg" alt="">
-                    <h4>Products</h4>
+                    <h4>Продукти</h4>
                 </div>
                 <div class="category">
                     <div class="category_header" id="cat_food_category">
-                        <h5>Categories</h5>
+                        <h5>Категорії</h5>
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
                     <ul class="cat_options">
@@ -132,7 +132,7 @@
                 </div>
                 <div class="category">
                     <div class="category_header" id="dog_food_category">
-                        <h5>Filters</h5>
+                        <h5>Фльтри</h5>
                         <a href="#"><img src="img/icons/arrow.svg" alt=""></a>
                     </div>
                     <ul class="dog_options">
@@ -189,7 +189,7 @@
                             </div>
                             <h6><?php echo $productArray[$index]->id ?></h6>
                         </div>
-                        <img src="img/main_content/dogs_product.jpg" alt=""
+                        <img src="<?php echo $productArray[$index]->poster; ?>" alt=""
                         href="pages/show_detailed_info.php?product_id=<?php echo $productArray[$index]->id ?>">
                         <div class="product_name">
                             <a href="pages/show_detailed_info.php?product_id=<?php echo $productArray[$index]->id ?>"> 
@@ -197,7 +197,7 @@
                             </a>
                         </div>
                         <div class="price"><?php echo $productArray[$index]->price ?> USD</div>
-                        <button>В корзину</button>
+                        <button>В кошик</button>
                         <div class="availability <?php 
                                     echo setAvailabilityStatus($productArray[$index]->isAvailable);
                                 ?>">
@@ -212,7 +212,7 @@
                 </div>
                 <div class="show_more">
                     <img src="img/icons/refresh.svg" alt="">
-                    <h3>Показать ещё</h3>
+                    <h3>Показать щё</h3>
                 </div>
                 <div class="paginator">
                     <a href="#" id="prev_page">Назад</a>
@@ -221,7 +221,7 @@
                     <a href="#" class="page current_page">3</a>
                     <a href="#" class="page">...</a>
                     <a href="#" class="page">12</a>
-                    <a href="" id="next_page">Вперёд</a>
+                    <a href="" id="next_page">Вперед</a>
                 </div>
             </div>
         </div>
@@ -230,34 +230,34 @@
     <footer>
         <div class="general_data">
             <div class="footer_logo"></div>
-            <p>Договор от 22.03.2021</p>
-            <p>Тоже важная ифнормация</p>
+            <p>Договор від 22.03.2021</p>
+            <p>Також важлива інформація</p>
             <p>© «All rights are preserved», 2021</p>
         </div>
         <div class="pages_of_site">
-            <h3>Страницы сайта</h3>
+            <h3>Сторінки сайта</h3>
             <div class="pages_of_site_container">
                 <a href="">
                     <h3>Каталог</h3>
                 </a><a href="">
-                    <h3>О нас</h3>
+                    <h3>Про нас</h3>
                 </a><a href="">
-                    <h3>Контакты</h3>
+                    <h3>Контакти</h3>
                 </a><a href="">
-                    <h3>Дотсавка и оплата</h3>
+                    <h3>Доставка та оплата</h3>
                 </a><a href="">
-                    <h3>Ещё какой-то пункт</h3>
+                    <h3>Ще один пункт</h3>
                 </a>
             </div>
         </div>
         <div class="contacts">
-            <h3>Контакты</h3>
+            <h3>Контакти</h3>
             <p>+380 80 353 55 55</p>
             <p>example.support@domain.com</p>
-            <p>г. Сумы ул. Люблинская</p>
+            <p>м. Сумы вул. Люблинская</p>
         </div>
         <div class="social_networks">
-            <h3>Мы в соц. сетях</h3>
+            <h3>Ми в соц. мережах</h3>
             <a href="">
                 <img src="img/icons/fb.png" alt="">
             </a>
@@ -270,50 +270,52 @@
    <!-- popup form -->
    <form id="login-form" class="mfp-hide white-popup-block" action="redirect_controller/authorization.php"
         method="post">
-        <h2 class="title">Sign in</h2>
+        <h2 class="title">Зайти в обліковий запис</h2>
 
         <p class="descr">
-            Login to web site to expericance more
+            Зайдіть в обліковий запис, щоб мати можливість переглядати товари,
+            та здійснювати покупки 
         </p>
 
-        <label for="login">Login</label>
+        <label for="login">Логін</label>
         <input type="email" name="login" id="login">
 
-        <label for="password">Password</label>
+        <label for="password">Пароль</label>
         <input type="password" id="password" name="password">
 
-        <button type="submit" class="btn">Sing in</button>
+        <button type="submit" class="btn">Ввійти</button>
 
-        <a href="#reg-form" class="toggle-popup">Sign up</a>
+        <a href="#reg-form" class="toggle-popup">Зареєструватися</a>
     </form>
 
     <!-- popup form -->
-    <form id="reg-form" class="mfp-hide white-popup-block" action="redirect_controller/authorization.php"
+    <form id="reg-form" class="mfp-hide white-popup-block" action="redirect_controller/register.php"
         method="post">
-        <h2 class="title">Registration</h2>
+        <h2 class="title">Зареєструватися</h2>
 
         <p class="descr">
-            Reg to web site to expericance more
+            Зареєструйтеся на сайті, щоб мати можливість переглядати товари,
+            та здійснювати покупки
         </p>
 
-        <label for="first_name">First name</label>
+        <label for="first_name">Ім'я</label>
         <input type="text" id="first_name" name="first_name">
 
-        <label for="second_name">Second name</label>
+        <label for="second_name">Фамілія</label>
         <input type="text" id="second_name" name="second_name">
 
-        <label for="login">Login</label>
+        <label for="login">Логін</label>
         <input type="email" id="login" name="login">
 
-        <label for="password">Password</label>
+        <label for="password">Пароль</label>
         <input type="password" id="password" name="password">
 
-        <label for="repeat_password">Repeat password</label>
+        <label for="repeat_password">Підтвердіть пароль</label>
         <input type="password" id="repeat_password" name="repeat_password">
 
-        <button type="submit" class="btn">Sing in</button>
+        <button type="submit" class="btn">Зареєеструватися</button>
 
-        <a href="#login-form" class="toggle-popup">Sign in</a>
+        <a href="#login-form" class="toggle-popup">Ввійти</a>
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

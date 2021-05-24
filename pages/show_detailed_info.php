@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <title>Zoo shop</title>
+    <title>Товар</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
     <div class="header">
         <div class="container">
             <div class="inner__header">
-                <a href="../index.html" class="logo">
+                <a href="../index.php" class="logo">
                     <img src="../img/icons/logo.svg" alt="">
                 </a>
                 <div class="header_menu_container">
@@ -118,34 +118,34 @@
     <footer>
         <div class="general_data">
             <div class="footer_logo"></div>
-            <p>Договор от 22.03.2021</p>
-            <p>Тоже важная ифнормация</p>
+            <p>Договор від 22.03.2021</p>
+            <p>Також важлива інформація</p>
             <p>© «All rights are preserved», 2021</p>
         </div>
         <div class="pages_of_site">
-            <h3>Страницы сайта</h3>
+            <h3>Сторінки сайта</h3>
             <div class="pages_of_site_container">
                 <a href="">
                     <h3>Каталог</h3>
                 </a><a href="">
-                    <h3>О нас</h3>
+                    <h3>Про нас</h3>
                 </a><a href="">
-                    <h3>Контакты</h3>
+                    <h3>Контакти</h3>
                 </a><a href="">
-                    <h3>Дотсавка и оплата</h3>
+                    <h3>Доставка та оплата</h3>
                 </a><a href="">
-                    <h3>Ещё какой-то пункт</h3>
+                    <h3>Ще один пункт</h3>
                 </a>
             </div>
         </div>
         <div class="contacts">
-            <h3>Контакты</h3>
+            <h3>Контакти</h3>
             <p>+380 80 353 55 55</p>
             <p>example.support@domain.com</p>
-            <p>г. Сумы ул. Люблинская</p>
+            <p>м. Сумы вул. Люблинская</p>
         </div>
         <div class="social_networks">
-            <h3>Мы в соц. сетях</h3>
+            <h3>Ми в соц. мережах</h3>
             <a href="">
                 <img src="img/icons/fb.png" alt="">
             </a>

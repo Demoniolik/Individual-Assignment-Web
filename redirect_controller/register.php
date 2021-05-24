@@ -8,20 +8,28 @@
     $password = $_POST["password"];
     $repeat_password = $_POST["repeat_passwrod"];
 
-    $FIND_USER_BY_CREDENTIALS_QUERY = "INSERT INTO user SET 
+    $result = mysqli_query($connection, $FIND_USER_BY_CREDENTIALS_QUERY);
+        $productArray = array();
+
+      if(mysqli_num_rows($result) > 0) {
+        header("Location: ../pages/error/error_user_exist.html");
+      }
+
+    $CREATE_USER_QUERY = "INSERT INTO user SET 
     first_name = '$first_name', second_name = '$second_name',
     login = '$login', password = '$password',
     blocked = 0, role_id = 2;";
 
-    $connection = mysqli_connect('127.0.0.1', 'root', '', 'pet_shop');
+    $connection = mysqli_connect('127.0.0.1', 'dima_bekker', 'ADMINthebest321', 'dimabekker131');
     if($connection == false) {
       echo "error";
     }
 
-    $result = mysqli_query($connection, $FIND_USER_BY_CREDENTIALS_QUERY);
+    $result = mysqli_query($connection, $CREATE_USER_QUERY);
+
+    $role_id = 2;
         
-        $_SESSION["user"] = $user;
-        $_SESSION["user_role"] = $user->role_id;
+        $_SESSION["user_role"] = $role_id;
         header("Location: ../index.php");
         exit();
 ?>
