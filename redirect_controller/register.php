@@ -8,8 +8,8 @@
     $password = $_POST["password"];
     $repeat_password = $_POST["repeat_passwrod"];
 
+    $FIND_USER_BY_CREDENTIALS_QUERY = "SELECT * FROM user WHERE login = '$login';";
     $result = mysqli_query($connection, $FIND_USER_BY_CREDENTIALS_QUERY);
-        $productArray = array();
 
       if(mysqli_num_rows($result) > 0) {
         header("Location: ../pages/error/error_user_exist.html");
